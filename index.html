@@ -13,8 +13,8 @@
         }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            background: #0d1117;
+            color: #c9d1d9;
             line-height: 1.6;
             padding: 20px;
             min-height: 100vh;
@@ -23,177 +23,278 @@
         .wiki-container {
             max-width: 1000px;
             margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: #161b22;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             overflow: hidden;
+            border: 1px solid #30363d;
         }
         
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            color: #f0f6fc;
+            padding: 40px;
             text-align: center;
+            border-bottom: 1px solid #30363d;
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #58a6ff;
+            font-weight: 600;
         }
         
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.9;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            color: #8b949e;
         }
         
         .mevn-badges {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 30px;
         }
         
         .badge {
-            padding: 8px 20px;
-            border-radius: 25px;
+            padding: 10px 25px;
+            border-radius: 20px;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            border: 1px solid #30363d;
+            background: #21262d;
         }
         
-        .badge.mongo { background: #47A248; color: white; }
-        .badge.express { background: #000; color: white; }
-        .badge.vue { background: #42b883; color: white; }
-        .badge.node { background: #339933; color: white; }
+        .badge.mongo { color: #47A248; border-color: #47A248; }
+        .badge.express { color: #ffffff; border-color: #ffffff; }
+        .badge.vue { color: #42b883; border-color: #42b883; }
+        .badge.node { color: #339933; border-color: #339933; }
         
         .content {
             padding: 40px;
         }
         
         h2 {
-            color: #667eea;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-            margin: 30px 0 20px 0;
+            color: #58a6ff;
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 12px;
+            margin: 40px 0 25px 0;
+            font-size: 1.8rem;
+            font-weight: 500;
         }
         
         h3 {
-            color: #764ba2;
-            margin: 20px 0 10px 0;
+            color: #f0f6fc;
+            margin: 25px 0 15px 0;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #c9d1d9;
         }
         
         .section {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 4px solid #667eea;
+            background: #0d1117;
+            border-radius: 6px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #238636;
+            border: 1px solid #30363d;
         }
         
         .info-box {
-            background: #e8f4fd;
-            border-left: 4px solid #2196F3;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 8px 8px 0;
+            background: #0d2b45;
+            border-left: 4px solid #1f6feb;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+            border: 1px solid #30363d;
         }
         
         .warning-box {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 8px 8px 0;
+            background: #3d2305;
+            border-left: 4px solid #d29922;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+            border: 1px solid #30363d;
         }
         
         code {
-            background: #f4f4f4;
-            padding: 2px 6px;
+            background: #21262d;
+            padding: 4px 8px;
             border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            color: #d63384;
+            font-family: 'Consolas', 'Monaco', monospace;
+            color: #a5d6ff;
+            border: 1px solid #30363d;
         }
         
         pre {
-            background: #2d2d2d;
-            color: #f8f8f2;
+            background: #0d1117;
+            color: #c9d1d9;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 6px;
             overflow-x: auto;
-            margin: 15px 0;
-            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
             font-size: 0.95rem;
+            border: 1px solid #30363d;
+            line-height: 1.5;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 25px 0;
+            border: 1px solid #30363d;
+            background: #0d1117;
         }
         
         th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
+            border: 1px solid #30363d;
+            padding: 15px;
             text-align: left;
         }
         
         th {
-            background: #667eea;
-            color: white;
+            background: #161b22;
+            color: #58a6ff;
+            font-weight: 600;
         }
         
-        tr:nth-child(even) {
-            background: #f9f9f9;
+        tr:hover {
+            background: #1a1f29;
         }
         
         .command {
-            background: #2d2d2d;
-            color: #00ff88;
-            padding: 10px 15px;
+            background: #0d1117;
+            color: #58a6ff;
+            padding: 15px;
             border-radius: 6px;
-            font-family: 'Courier New', monospace;
-            margin: 10px 0;
+            font-family: 'Consolas', monospace;
+            margin: 15px 0;
+            border-left: 4px solid #238636;
+            border: 1px solid #30363d;
+            white-space: pre-wrap;
+            line-height: 1.5;
         }
         
         .tip {
-            background: #d4edda;
-            border-left: 4px solid #28a745;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 8px 8px 0;
+            background: #132238;
+            border-left: 4px solid #238636;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+            border: 1px solid #30363d;
         }
         
         footer {
             text-align: center;
-            padding: 20px;
-            background: #f8f9fa;
-            color: #666;
-            border-top: 1px solid #ddd;
+            padding: 25px;
+            background: #0d1117;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
             margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #c9d1d9;
         }
         
         @media (max-width: 768px) {
             .content {
-                padding: 20px;
+                padding: 25px;
             }
             
             h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
             .mevn-badges {
                 flex-direction: column;
                 align-items: center;
+                gap: 12px;
             }
+            
+            .badge {
+                width: 200px;
+                text-align: center;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+        }
+        
+        .terminal {
+            background: #0d1117;
+            border-radius: 6px;
+            margin: 20px 0;
+            border: 1px solid #30363d;
+            overflow: hidden;
+        }
+        
+        .terminal-header {
+            background: #21262d;
+            padding: 12px 20px;
+            color: #8b949e;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #30363d;
+        }
+        
+        .terminal-dot.red { background: #f85149; }
+        .terminal-dot.yellow { background: #d29922; }
+        .terminal-dot.green { background: #238636; }
+        
+        .terminal-content {
+            padding: 20px;
+            color: #58a6ff;
+            font-family: 'Consolas', monospace;
+            line-height: 1.5;
+        }
+        
+        .prompt {
+            color: #238636;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="wiki-container">
         <header>
-            <h1>🚀 MEVN-стек: мини-вики</h1>
+            <h1>MEVN-стек: мини-вики</h1>
             <p class="subtitle">Полное руководство для начинающих разработчиков</p>
             <div class="mevn-badges">
                 <div class="badge mongo">MongoDB</div>
@@ -232,23 +333,35 @@ Node.js среда выполнения
                 <h2>⚡ Быстрый старт</h2>
                 
                 <h3>1. Установка необходимых компонентов</h3>
-                <div class="command"># Установка Node.js и npm
-# Скачать с сайта: https://nodejs.org/</div>
-                
-                <div class="command"># Проверка установки
-node --version
-npm --version</div>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dot red"></div>
+                        <div class="terminal-dot yellow"></div>
+                        <div class="terminal-dot green"></div>
+                        <span>terminal</span>
+                    </div>
+                    <div class="terminal-content">
+                        <span class="prompt">$</span> # Установка Node.js и npm<br>
+                        <span class="prompt">$</span> # Скачать с сайта: https://nodejs.org/<br><br>
+                        
+                        <span class="prompt">$</span> node --version<br>
+                        v18.17.0<br><br>
+                        
+                        <span class="prompt">$</span> npm --version<br>
+                        9.6.7
+                    </div>
+                </div>
                 
                 <h3>2. Создание проекта</h3>
                 <div class="command"># Установка Vue CLI
-npm install -g @vue/cli</div>
-                
-                <div class="command"># Создание Vue приложения (фронтенд)
+npm install -g @vue/cli
+
+# Создание Vue приложения (фронтенд)
 vue create client
 cd client
-npm install axios vue-router</div>
-                
-                <div class="command"># Создание Express сервера (бэкенд)
+npm install axios vue-router
+
+# Создание Express сервера (бэкенд)
 mkdir server
 cd server
 npm init -y
@@ -429,7 +542,7 @@ npm install</div>
                 <h2>📚 Ресурсы для изучения</h2>
                 
                 <h3>Официальная документация:</h3>
-                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                <ul>
                     <li><a href="https://vuejs.org/" target="_blank">Vue.js — официальный сайт</a></li>
                     <li><a href="https://expressjs.com/ru/" target="_blank">Express.js — документация на русском</a></li>
                     <li><a href="https://mongoosejs.com/" target="_blank">Mongoose ODM для MongoDB</a></li>
@@ -437,7 +550,7 @@ npm install</div>
                 </ul>
                 
                 <h3>Видео материалы:</h3>
-                <ul style="margin-left: 20px;">
+                <ul>
                     <li><a href="https://dmitrylavrik.ru/video" target="_blank">Видеотека Дмитрия Лаврика</a></li>
                     <li>YouTube: поиск по запросу "MEVN стек tutorial"</li>
                 </ul>
@@ -445,37 +558,44 @@ npm install</div>
         </div>
         
         <footer>
-            <p>Мини-вики по MEVN-стеку | Создано для учебного задания | 2025</p>
+            <p>Мини-вики по MEVN-стеку | Создано для учебного задания</p>
             <p>На основе материалов Дмитрия Лаврика и официальной документации</p>
         </footer>
     </div>
     
     <script>
-        // Простой скрипт для подсветки синтаксиса кода
+        // Простой скрипт для копирования кода
         document.addEventListener('DOMContentLoaded', function() {
-            // Подсветка активной секции при прокрутке
-            const sections = document.querySelectorAll('.section');
-            const navLinks = [];
+            const codeBlocks = document.querySelectorAll('pre, .command');
             
-            window.addEventListener('scroll', function() {
-                let current = '';
+            codeBlocks.forEach(block => {
+                block.style.cursor = 'pointer';
+                block.title = 'Кликните для копирования';
                 
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (scrollY >= (sectionTop - 100)) {
-                        current = section.getAttribute('id');
-                    }
+                block.addEventListener('click', function() {
+                    const text = this.textContent;
+                    navigator.clipboard.writeText(text).then(() => {
+                        const original = this.textContent;
+                        this.textContent = '✅ Скопировано!';
+                        setTimeout(() => {
+                            this.textContent = original;
+                        }, 1500);
+                    });
                 });
-                
-                // Можно добавить навигацию если нужно
             });
             
-            // Автоматическое обновление года в футере
-            const yearSpan = document.getElementById('current-year');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
+            // Анимация для баджей
+            const badges = document.querySelectorAll('.badge');
+            badges.forEach(badge => {
+                badge.addEventListener('mouseenter', () => {
+                    badge.style.transform = 'translateY(-2px)';
+                    badge.style.transition = 'transform 0.2s';
+                });
+                
+                badge.addEventListener('mouseleave', () => {
+                    badge.style.transform = 'translateY(0)';
+                });
+            });
         });
     </script>
 </body>
