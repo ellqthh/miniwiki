@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEVN-стек: мини-вики</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .wiki-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .mevn-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .badge.mongo { background: #47A248; color: white; }
+        .badge.express { background: #000; color: white; }
+        .badge.vue { background: #42b883; color: white; }
+        .badge.node { background: #339933; color: white; }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin: 30px 0 20px 0;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin: 20px 0 10px 0;
+        }
+        
+        .section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .info-box {
+            background: #e8f4fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .command {
+            background: #2d2d2d;
+            color: #00ff88;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+        
+        .tip {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .mevn-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wiki-container">
+        <header>
+            <h1>🚀 MEVN-стек: мини-вики</h1>
+            <p class="subtitle">Полное руководство для начинающих разработчиков</p>
+            <div class="mevn-badges">
+                <div class="badge mongo">MongoDB</div>
+                <div class="badge express">Express.js</div>
+                <div class="badge vue">Vue.js</div>
+                <div class="badge node">Node.js</div>
+            </div>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📚 Что такое MEVN-стек?</h2>
+                <p><strong>MEVN</strong> — современный стек технологий для создания полноценных веб-приложений, где JavaScript используется на всех уровнях разработки.</p>
+                
+                <div class="info-box">
+                    <strong>💡 Ключевое преимущество:</strong> Единый язык программирования (JavaScript) от базы данных до пользовательского интерфейса.
+                </div>
+                
+                <h3>Архитектура MEVN:</h3>
+                <pre>
+Клиент (браузер)
+    ↓
+Vue.js приложение
+    ↓
+HTTP запросы
+    ↓
+Express.js сервер
+    ↓
+MongoDB база данных
+    ↑
+Node.js среда выполнения
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>⚡ Быстрый старт</h2>
+                
+                <h3>1. Установка необходимых компонентов</h3>
+                <div class="command"># Установка Node.js и npm
+# Скачать с сайта: https://nodejs.org/</div>
+                
+                <div class="command"># Проверка установки
+node --version
+npm --version</div>
+                
+                <h3>2. Создание проекта</h3>
+                <div class="command"># Установка Vue CLI
+npm install -g @vue/cli</div>
+                
+                <div class="command"># Создание Vue приложения (фронтенд)
+vue create client
+cd client
+npm install axios vue-router</div>
+                
+                <div class="command"># Создание Express сервера (бэкенд)
+mkdir server
+cd server
+npm init -y
+npm install express mongoose cors dotenv</div>
+                
+                <div class="warning-box">
+                    <strong>⚠️ Важно:</strong> Для MongoDB нужно установить локальную версию или использовать MongoDB Atlas (бесплатный облачный сервис).
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📁 Структура проекта</h2>
+                
+                <pre>
+mevn-app/
+├── client/                    # Vue.js приложение
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── components/       # Vue компоненты
+│   │   ├── views/           # Страницы приложения
+│   │   ├── router/          # Маршрутизация
+│   │   ├── App.vue          # Главный компонент
+│   │   └── main.js          # Точка входа
+│   └── package.json
+├── server/                   # Express сервер
+│   ├── models/              # Mongoose модели
+│   ├── routes/              # API endpoints
+│   ├── controllers/         # Логика обработки
+│   ├── server.js            # Главный файл сервера
+│   └── package.json
+└── README.md
+                </pre>
+            </div>
+            
+            <div class="section">
+                <h2>💻 Базовый пример кода</h2>
+                
+                <h3>Express сервер (server.js)</h3>
+                <pre><code>const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+const app = express();
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Подключение к MongoDB
+mongoose.connect('mongodb://localhost:27017/mevn_app', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+// Простой маршрут
+app.get('/api/hello', (req, res) => {
+    res.json({ message: 'Привет от MEVN-стека!' });
+});
+
+// Запуск сервера
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`🚀 Сервер запущен на порту ${PORT}`);
+});</code></pre>
+                
+                <h3>Vue компонент (HelloWorld.vue)</h3>
+                <pre><code>&lt;template&gt;
+  &lt;div class="hello"&gt;
+    &lt;h1&gt;{{ title }}&lt;/h1&gt;
+    &lt;p&gt;{{ message }}&lt;/p&gt;
+    &lt;button @click="fetchData"&gt;
+      Получить данные с сервера
+    &lt;/button&gt;
+    &lt;div v-if="serverMessage"&gt;
+      Ответ сервера: {{ serverMessage }}
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios';
+
+export default {
+  name: 'HelloWorld',
+  data() {
+    return {
+      title: 'MEVN-стек',
+      message: 'Добро пожаловать!',
+      serverMessage: ''
+    }
+  },
+  methods: {
+    async fetchData() {
+      try {
+        const response = await axios.get('http://localhost:5000/api/hello');
+        this.serverMessage = response.data.message;
+      } catch (error) {
+        console.error('Ошибка:', error);
+      }
+    }
+  }
+}
+&lt;/script&gt;</code></pre>
+            </div>
+            
+            <div class="section">
+                <h2>🔧 Частые проблемы и решения</h2>
+                
+                <table>
+                    <tr>
+                        <th>Проблема</th>
+                        <th>Решение</th>
+                    </tr>
+                    <tr>
+                        <td><strong>CORS ошибка</strong><br>Браузер блокирует запросы</td>
+                        <td>Установить CORS middleware:<br>
+                            <code>npm install cors</code><br>
+                            <code>app.use(cors())</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>MongoDB не подключается</strong></td>
+                        <td>1. Проверить запущен ли MongoDB<br>
+                            2. Использовать MongoDB Atlas<br>
+                            3. Проверить строку подключения
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vue не видит изменения</strong></td>
+                        <td>1. Перезапустить сервер разработки<br>
+                            2. Очистить кэш браузера<br>
+                            3. Использовать <code>npm run serve --force</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Нет связи между фронтендом и бэкендом</strong></td>
+                        <td>1. Проверить порты (обычно 8080 и 3000/5000)<br>
+                            2. Проверить правильность URL в axios<br>
+                            3. Убедиться что сервер запущен
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="tip">
+                    <strong>🎯 Простой совет:</strong> Всегда проверяйте консоль браузера (F12 → Console) и терминал, где запущен сервер. 90% проблем видны сразу в логах.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📖 Полезные команды</h2>
+                
+                <div class="command"># Запуск Vue приложения для разработки
+cd client
+npm run serve</div>
+                
+                <div class="command"># Сборка Vue приложения для production
+cd client
+npm run build</div>
+                
+                <div class="command"># Запуск Express сервера
+cd server
+node server.js</div>
+                
+                <div class="command"># Запуск сервера с авто-перезагрузкой (nodemon)
+cd server
+npm install -D nodemon
+# добавить в package.json:
+# "scripts": { "dev": "nodemon server.js" }
+npm run dev</div>
+                
+                <div class="command"># Установка всех зависимостей
+# В папке client или server:
+npm install</div>
+            </div>
+            
+            <div class="section">
+                <h2>📚 Ресурсы для изучения</h2>
+                
+                <h3>Официальная документация:</h3>
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li><a href="https://vuejs.org/" target="_blank">Vue.js — официальный сайт</a></li>
+                    <li><a href="https://expressjs.com/ru/" target="_blank">Express.js — документация на русском</a></li>
+                    <li><a href="https://mongoosejs.com/" target="_blank">Mongoose ODM для MongoDB</a></li>
+                    <li><a href="https://nodejs.org/en/docs/" target="_blank">Node.js документация</a></li>
+                </ul>
+                
+                <h3>Видео материалы:</h3>
+                <ul style="margin-left: 20px;">
+                    <li><a href="https://dmitrylavrik.ru/video" target="_blank">Видеотека Дмитрия Лаврика</a></li>
+                    <li>YouTube: поиск по запросу "MEVN стек tutorial"</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Мини-вики по MEVN-стеку | Создано для учебного задания | 2025</p>
+            <p>На основе материалов Дмитрия Лаврика и официальной документации</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Простой скрипт для подсветки синтаксиса кода
+        document.addEventListener('DOMContentLoaded', function() {
+            // Подсветка активной секции при прокрутке
+            const sections = document.querySelectorAll('.section');
+            const navLinks = [];
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                // Можно добавить навигацию если нужно
+            });
+            
+            // Автоматическое обновление года в футере
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
